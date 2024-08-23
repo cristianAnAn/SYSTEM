@@ -151,7 +151,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'systempycoil@gmail.com'
-EMAIL_HOST_PASSWORD = 'k k y c p r t n t n o r t z a u'
+EMAIL_HOST_PASSWORD = 'nehf gfkf ogus etux'
 
 
 SESSION_COOKIE_AGE = 1800 # 1 hour (in seconds)
