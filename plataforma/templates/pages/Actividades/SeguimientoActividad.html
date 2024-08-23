@@ -1,0 +1,24 @@
+{% extends 'layouts/baseAdmin.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/FasesCoil/fasesBase.css' %}"><div>
+    {% include "layouts/ClaseBase.html" %}
+    
+    <h1 class="titulo">Progreso del grupo</h1>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+    {% for alumno in alumnos %}
+    <div class="col">
+        <a href="{% url 'SeguimientoAct' codigo alumno.2 %}" class="text-decoration-none text-dark">
+            <div class="card h-100 my-4 cardh">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <div class="icono"><i class="bi bi-award"></i> </div> {{alumno.0}} {{alumno.1}}
+                    </h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

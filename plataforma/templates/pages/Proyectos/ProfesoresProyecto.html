@@ -1,0 +1,46 @@
+{% extends 'layouts/baseAdmin.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+{% include "layouts/ClaseBase.html" %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Profesores Asociados al Proyecto</h1>
+    <div class="row">
+        {% for profesor in profesores %}
+        <div class="col-md-6 col-lg-6 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-header titulo text-white text-center">
+                    <h4 class="mb-0">{{ profesor.0 }} {{ profesor.1 }}</h4>
+                </div>
+                <div class="card-body">
+                    {% if profesor.7 %}
+                    <div class="mb-3 text-center">
+                        <img src="{% get_media_prefix %}{{ profesor.7 }}" class="img-fluid rounded" alt="Imagen del profesor" style="max-height: 200px;">
+                    </div>
+                    {% endif %}
+                    <div class="mb-3">
+                        <h5 class="card-title">Trayectoria Académica</h5>
+                        <p class="card-text">{{ profesor.3 }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <h5 class="card-title">Trayectoria Profesional</h5>
+                        <p class="card-text">{{ profesor.4 }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <h5 class="card-title">Descripción</h5>
+                        <p class="card-text">{{ profesor.5 }}</p>
+                    </div>
+                    <div class="mb-3">
+                        <h5 class="card-title">Gustos Personales</h5>
+                        <p class="card-text">{{ profesor.6 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:2 and not forloop.last %}
+        </div><div class="row">
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

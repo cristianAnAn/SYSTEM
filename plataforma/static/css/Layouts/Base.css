@@ -1,0 +1,91 @@
+.azulDark{
+    background-color: #0d6efd;
+}
+.azulDark:hover{
+    background-color: #0049b6;
+}
+.verdeDark{
+    background-color: #009882;
+}
+.verdeDark:hover{
+    background-color: #006051;
+}
+.rojoDark{
+    background-color: red;
+}
+.rojoDark:hover{
+    background-color: rgb(127, 0, 0);
+}
+.purpuraDark{
+    background-color: purple;
+}
+.purpuraDark:hover{
+    background-color: rgb(75, 1, 75);
+}
+.gris{
+    background-color: gray;
+}
+.gris:hover{
+    background-color: rgb(85, 85, 85);
+}
+/**Nuevos colores*/
+.rosaDark{
+    background-color: #e4007c;
+}
+.rosaDark:hover{
+    background-color: #b10061;
+}
+.celesteDark{
+    background-color: #51d1f6;
+}
+.celesteDark:hover{
+    background-color: #29b4dc;
+}
+.rojoOscuroDark{
+    background-color: #800000;
+}
+.rojoOscuroDark:hover{
+    background-color: #4d0000;
+}
+.chocolateDark{
+    background-color: #45322e;
+}
+.chocolateDark:hover{
+    background-color: #2d1e1b;
+}
+.verdeClaroDark{
+    background-color: #00ff7f;
+}
+.verdeClaroDark:hover{
+    background-color: #00c462;
+}
+.verdeOscuroDark{
+    background-color: #004225;
+}
+.verdeOscuroDark:hover{
+    background-color: #002716;
+}
+.doradoDark{
+    background-color: #efb810;
+}
+.doradoDark:hover{
+    background-color: #d09c00;
+}
+.salmonDark{
+    background-color: #e55137;
+}
+.salmonDark:hover{
+    background-color: #d13519;
+}
+.violetaDark{
+    background-color: #9400d3;
+}
+.violetaDark:hover{
+    background-color: #6d019b;
+}
+.azulOscuroDark{
+    background-color: #094293;
+}
+.azulOscuroDark:hover{
+    background-color: #023071;
+}

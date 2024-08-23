@@ -1,0 +1,40 @@
+{% load static %}
+<!-- Modal de edición -->
+<div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarModalLabel">Editar Actividad</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" enctype="multipart/form-data" action="{%url 'editarActividad' actividad.0%}">
+                {% csrf_token %}
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="titulo" class="form-label">Tema</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" value="{{ actividad.3 }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="descripcion" name="descripcion" rows="3">{{ actividad.4 }}</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="enlaces" class="form-label">Enlaces</label>
+                        {% for linkss in mostrar_links %}
+                        <input type="url" value="{{ linkss.2 }}" class="form-control" id="enlaces" name="path" rows="3">
+                        <input type="hidden" name="id_enlaces" id="id_enlaces" value="{{ linkss.0 }}">                
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        <label for="files_actividad">Archivos Adicionales</label>
+                        <input type="file" class="form-control-file" id="files_actividad" name="files" multiple>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
